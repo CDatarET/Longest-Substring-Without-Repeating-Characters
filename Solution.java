@@ -4,10 +4,8 @@ class Solution {
         int l = 0;
         int max = 0;
         for(int i = 0; i < s.length(); i++){
-            if(set.contains(s.charAt(i))){
-                while(set.contains(s.charAt(i))){
-                    set.remove(s.charAt(l++));
-                }
+            while(set.contains(s.charAt(i))){
+                set.remove(s.charAt(l++));
             }
 
             set.add(s.charAt(i));
